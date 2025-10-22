@@ -1,0 +1,60 @@
+{
+  "name": "tu-hoc-nodejs",
+  "version": "1.0.0",
+  "description": "nodejs pro hoidanit",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon",
+    "dev": "nodemon",
+    "start:debug": "nodemon -e ts,tsx --exec node --inspect=9229 -r ts-node/register -r tsconfig-paths/register ./src/app.ts"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "node_modules"
+    ],
+    "exec": "ts-node -r tsconfig-paths/register ./src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VANDUY-1910/Tu-hoc-nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "NVD",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VANDUY-1910/Tu-hoc-nodejs/issues"
+  },
+  "homepage": "https://github.com/VANDUY-1910/Tu-hoc-nodejs#readme",
+  "dependencies": {
+    "@prisma/client": "6.3.0",
+    "bcrypt": "5.1.1",
+    "dotenv": "16.4.7",
+    "ejs": "3.1.10",
+    "express": "5.0.1",
+    "multer": "1.4.5-lts.1",
+    "mysql2": "3.14.3",
+    "uuid": "11.0.5",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "5.0.2",
+    "@types/ejs": "3.1.5",
+    "@types/express": "5.0.0",
+    "@types/multer": "1.4.12",
+    "@types/node": "22.10.7",
+    "nodemon": "3.1.9",
+    "prisma": "6.3.0",
+    "ts-node": "10.9.2",
+    "tsconfig-paths": "4.2.0",
+    "typescript": "5.7.3"
+  }
+}
